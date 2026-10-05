@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens centralizadas e redondas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #222;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #0066cc;
+            padding-bottom: 5px;
+        }
+        .caixa {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Foto pequena do cartão de perfil */
+        .foto-perfil {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #0066cc;
+            transition: transform 0.3s ease;
+        }
+        .foto-perfil:hover {
+            transform: scale(1.1);
+        }
+
+        /* Foto grande de demonstração */
+        .foto-perfil-grande {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #0066cc;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        .foto-perfil-grande:hover {
+            transform: scale(1.1);
+        }
+
+        .redes-sociais {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Círculo que envolve o ícone */
+        .icone-social {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 36px;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        /* Zoom ao passar o mouse */
+        .icone-social:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+
+        /* Cores de fundo de cada rede */
+        .instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+        .facebook  { background: #1877F2; }
+        .x-twitter { background: #000000; }
+        .youtube   { background: #FF0000; }
+    </style>
+</head>
+<body>
+    <h1>Imagens centralizadas e redondas</h1>
+
+    <h2>1. Foto de perfil com texto ao lado</h2>
+    <div class="caixa" style="display: flex; align-items: center; gap: 20px;">
+        <img src="images.webp" alt="Foto de perfil" class="foto-perfil">
+        <div>
+            <h3 style="margin: 0;">Maria Silva</h3>
+            <p style="margin: 5px 0; color: #666;">Desenvolvedora Web</p>
+        </div>
+    </div>
+
+    <h2>2. Centralizada com text-align</h2>
+    <div class="caixa" style="text-align: center;">
+        <img src="https://picsum.photos/300/200" alt="Imagem centralizada">
+    </div>
+
+    <h2>3. Centralizada com margin auto</h2>
+    <div class="caixa">
+        <img src="https://picsum.photos/300/200" alt="Imagem centralizada"
+             style="display: block; margin: 0 auto;">
+    </div>
+
+    <h2>4. Centralizada com Flexbox (horizontal + vertical)</h2>
+    <div class="caixa" style="display: flex; justify-content: center; align-items: center; height: 300px;">
+        <img src="https://picsum.photos/300/200" alt="Imagem centralizada">
+    </div>
+
+    <h2>5. Foto de perfil redonda</h2>
+    <div class="caixa" style="text-align: center;">
+        <img src="https://picsum.photos/300/200" alt="Foto de perfil" class="foto-perfil-grande">
+    </div>
+
+    <h2>6. Links Aleatórios</h2>
+    <div class="caixa" style="text-align: center;">
+        <div class="redes-sociais">
+            <a href="https://instagram.com/seu-perfil" target="_blank" rel="noopener" class="icone-social instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://facebook.com/sua-pagina" target="_blank" rel="noopener" class="icone-social facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://x.com/seu-perfil" target="_blank" rel="noopener" class="icone-social x-twitter">
+                <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="https://www.youtube.com/watch?v=9bZkp7q19f0&autoplay=1&mute=1" target="_blank" rel="noopener" class="icone-social youtube">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
